@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <input id="userInput" type="text">
+    <button onclick="get()">click on me</button>
+    <script>
+      function get() {
+        location.href="input3.html";
+        var x = document.getElementById('userInput').value;
+         localStorage.setItem("userInput",x);
+      }
+      
+    </script>
+    
+    
+  </body>
+  
+  
+</html>
