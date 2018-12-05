@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      #box {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <h1 id="counter"></h1>
+    <script>
+      var degrees = 0;
+      document.body.addEventListener('keydown',function(userchoice){
+      var x =userchoice.keyCode;
+      document.getElementById('counter').innerHTML = x;
+      if (x == 65) {
+        degrees--;
+        
+        document.getElementById('box').style.transform = "rotate("+degrees+"deg)";
+      }
+      else if (x == 68 || x == 83) {
+        degrees++;
+        document.getElementById('box').style.transform = "rotate("+degrees+"deg)";
+      }
+      });
+      
+    </script>
+  </body>
+  
+</html>
