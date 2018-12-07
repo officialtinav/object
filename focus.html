@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+    input {
+      height: 18vh;
+      width: 30vw;
+      font-size: 8vh;
+    }
+    </style>
+  </head>
+  <body>
+    <input type="username" id="username" onfocus="getuser()" onblur="saveuser()">
+    <input type="password" id="password" onfocus="getpass()" onblur="savepass()">
+    
+    <h1 id="output"></h1>
+    
+    <script>
+    var duser = document.getElementById('username');
+    var dpass = document.getElementById('password');
+    var doutput = document.getElementById('output');
+      function getuser() {
+        duser.style.backgroundColor = "yellow";
+        dpass.style.backgroundColor = "white";
+        doutput.innerHTML="enter your username";
+      }
+      function getpass() {
+        dpass.style.backgroundColor = "yellow";
+        duser.style.backgroundColor = "white";
+        doutput.innerHTML = "enter your password";
+      }
+      function saveuser() {
+        localStorage.setItem('userkey',duser.value);
+      }
+      function savepass() {
+        localStorage.setItem('passkey',dpass.value);
+        location.href="period5a.html";
+      }
+    </script>
+  </body>
+  
+</html>
